@@ -34,6 +34,7 @@
 }
 html {
   box-sizing: border-box;
+  color-scheme: light;
 }
 
 *,
@@ -41,7 +42,7 @@ html {
 *::after {
   box-sizing: inherit;
   transition: all 0.5s ease-in-out;
-  text-align: justify;
+  text-align: center;
 }
 header{
   display: flex;
@@ -108,12 +109,14 @@ img {
 }
 h1 {
   font-size: calc(var(--base-font-size) * 2.7);
+  /* text-align: center; */
   margin: 0;
   margin-top: 5px;
 }
 h2 {
   font-size: var(--base-font-size);
   text-transform: uppercase;
+  /* text-align: center; */
   color: var(--ld-blue);
   letter-spacing: 0.25em;
   margin: 0;
@@ -142,7 +145,6 @@ a:hover {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  /* border-bottom: 1px solid var(--marina); */
   text-align: center;
   margin: 20px 5px;
   padding: 0;
@@ -201,7 +203,6 @@ ul svg {
 main {
   margin-top: 5rem;
   margin-bottom: 3rem;
-  /* text-align: center; */
 }
 .projects {
   display: flex;
@@ -271,24 +272,26 @@ footer {
 .footer-text .social:hover {
   fill: var(--marina);
 }
-@media (min-width: 750px) {
+@media (min-width: 780px) {
+  *{
+    text-align: justify;
+  }
   :root {
     --base-font-size: 1.125rem;
   }
   h1 {
+    font-size: calc(var(--base-font-size)*2);
+    margin-top: 15px;
     margin-left: -3px;
   }
-  .wrapper {
-    padding: 5rem;
-  }
-  .radio-switch {
-    justify-content: flex-end;
-  }
   .main-article {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    text-align: justify;
   }
+  /* .main-article .text {
+    text-align: justify;
+  } */
   .main-article img {
     max-height: 400px;
     margin: 35px auto;

@@ -21,6 +21,8 @@ const setTheme = (theme) => {
 }
 const loadTheme = () =>{
     const savedTheme = localStorage.getItem('theme');
+    console.log(savedTheme);
+    if(savedTheme=='dark') circle.classList.add('toggled');
     if(savedTheme) setTheme(savedTheme);
 }
 modeSwicher.addEventListener('click', ()=>{
@@ -28,40 +30,7 @@ modeSwicher.addEventListener('click', ()=>{
     circle.classList.toggle('toggled');
     console.log("ok")
 })
-// lightModeBtn.addEventListener('click', ()=>setTheme('light'));
-// DarkModeBtn.addEventListener('click', ()=>setTheme('dark'));
 
-
-// const body = document.querySelector("body");
-// const button = document.querySelector(".but");
-
-// function buttonClick(){
-    // console.log("buttonClicked");
-    // if(circle.style.backgroundColor == "rgb(33, 33, 33)"){
-    //     image.src = ("img/4.png");
-    //     body.style.backgroundColor = "rgb(240, 240, 240)";
-    //     button.style.backgroundColor = "rgb(33, 33, 33)";
-    //     circle.style.backgroundColor = "rgb(240, 240, 240)";
-    //     circle.style.transform = "translateX(0px)";
-    //     circle.style.transition = "0.5s";
-    //     button.style.transition = "0.5s";
-    //     body.style.transition = "0.5s";
-    //     console.log('became white');
-    // } else {        
-    //     image.src = ("img/6.png");
-    //     body.style.backgroundColor = "rgb(33, 33, 33)";
-    //     button.style.backgroundColor = "rgb(240, 240, 240)";
-    //     circle.style.backgroundColor = "rgb(33, 33, 33)";
-    //     circle.style.transform = "translateX(28px)";
-    //     circle.style.transition = "0.5s";
-    //     button.style.transition = "0.5s";
-    //     body.style.transition = "0.5s";
-
-    //     console.log('became black');   
-    // }
-// }
-
-// button.addEventListener('click', buttonClick);
 
 //in bayad baraye panel ha bashe
 projectsPanels.forEach((panel,index)=>{
