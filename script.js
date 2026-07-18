@@ -4,8 +4,6 @@ const projectType = document.querySelectorAll('.project .text ul');
 const projectsPanels = Array.from(document.querySelectorAll('.projects'));
 
 const html = document.documentElement;
-// const lightModeBtn = document.querySelector('[data-set-theme="light"]');
-// const DarkModeBtn = document.querySelector('[data-set-theme="dark"]');
 const modeSwicher = document.querySelector(".but");
 const circle = document.querySelector(".circle");
 
@@ -39,15 +37,6 @@ projectsPanels.forEach((panel,index)=>{
 let activePannel;
 let activePannelName;
 
-function addingProjectsToPanels(){
-}
-function makeProjects(projectTypeDiv){
-    // panel ro begiram va article(projectTypeDiv) ro behesh append konam
-    
-    // newArticle.appendChild(projectTypeDiv);
-    // return newArticle;
-}
-
 function switchTab(e){
     const clickedLi = e.target.closest('li');
     if(!clickedLi) return;
@@ -74,6 +63,7 @@ function switchTab(e){
         if(activePannel.classList == `All-panel projects`){
             activePannel.appendChild(projectType.parentElement.parentElement);
         }
+        //ino dorost konam ke faghat akharin gozine ro check nakone va hama ro chek kone
         switch (projectType.lastElementChild.innerHTML){
             case 'CSS':
                 //add to css panel
@@ -97,10 +87,10 @@ function switchTab(e){
                     activePannel.appendChild(projectType.parentElement.parentElement);
                 }
                 break;
-            case 'Tailwind':
-                //add to wordpress panel
-                console.log('Tailwind');
-                if(activePannel.classList == `Tailwind-panel projects`){
+            case 'React':
+                //add to React panel
+                console.log('React');
+                if(activePannel.classList == `React-panel projects`){
                     activePannel.appendChild(projectType.parentElement.parentElement);
                 }
                 break;

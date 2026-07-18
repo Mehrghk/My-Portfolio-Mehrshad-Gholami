@@ -128,6 +128,8 @@ p {
   line-height: 1.5;
 }
 a {
+  display: flex;
+  height: max-content;
   color: var(--ld-blue);
   font-weight: bold;
 }
@@ -176,8 +178,8 @@ a:hover {
   gap: 2rem;
 }
 ul svg {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
 }
 .social {
   fill: var(--ld-blue);
@@ -289,9 +291,11 @@ footer {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
-  /* .main-article .text {
-    text-align: justify;
-  } */
+  .project .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .main-article img {
     max-height: 400px;
     margin: 35px auto;
